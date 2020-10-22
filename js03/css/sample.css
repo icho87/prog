@@ -1,0 +1,65 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    font-family: Yu Gothic;
+}
+header{
+    background-color: #f5f5dc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #f5f5dc;
+    background-color: #f5f5dc;
+
+}
+#echo{
+    text-align:center;
+    font-size:80px;
+    color:#ff0000;
+}
+#test{
+    text-align:center;
+}
+#quiz{
+    margin:50px;
+    text-align:left;
+}
+footer{
+    background-color: #f5f5dc;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+#pull{
+    background-color: #f5f5dc;
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+#answer{
+    margin: 50px;
+    color:#f5f5dc;
+}

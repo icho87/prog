@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>おみクイズ</title>
+</head>
+<body>
+
+<header>
+    <h1>おみクイズ</h1>
+    <p>おみくじと同時にクイズが発生します。クイズを解いて運勢をよくしよう！</p>
+</header>
+
+<main>
+    <ul>
+        <li id="pull">おみクイズを引く</li>
+    </ul>
+    <p id="echo"></p>
+    <p id="test"></p>
+    <p id="quiz"></p>
+</main>
+
+<footer>
+    <h2>Answer</h2>
+    <h4>↓ →→→ドラッグ選択で答えが出てきます→→→ ↓</h4>
+    <p id="answer">answer</p>
+</footer>
+
+<script>
+const pull=document.querySelector("#pull");
+pull.onclick=function(){
+    const num=Math.ceil(Math.random()*10);
+    if(num==1){
+        const echo=document.querySelector("#echo");
+        echo.innerHTML="大吉";
+        const test=document.querySelector("#test");
+        test.innerHTML="おめでとうございます、大吉です！強運な貴方には簡単な問題をプレゼント！";
+        const puiz=document.querySelector("#quiz");
+        quiz.innerHTML="【問題】初夢で見ると一番良いとされる、日本で一番高い山は何でしょう。";
+        const answer=document.querySelector("#answer");
+        answer.innerHTML="【答え】富士山……富士山のように高い望みをもっていれば、今日は全てが上手くいきそう！";
+    }else if(num<=3){
+        const echo=document.querySelector("#echo");
+        echo.innerHTML="中吉";
+        const test=document.querySelector("#test");
+        test.innerHTML="貴方は中吉でした。次の問題を解けば大吉と並ぶ素敵な日になるでしょう！";
+        const puiz=document.querySelector("#quiz");
+        quiz.innerHTML="【問題】右手では金運、左手では人を招くとされる、魔除けや幸運の象徴である置物は何でしょう。";
+        const answer=document.querySelector("#answer");
+        answer.innerHTML="【答え】招き猫……この問題に正解できた貴方は、何かに招かれて得をするかも！";
+    }else if(num<=6){
+        const echo=document.querySelector("#echo");
+        echo.innerHTML="小吉";
+        const test=document.querySelector("#test");
+        test.innerHTML="貴方は小吉でした。ちょっと難しい問題を解いて晴れやかな気持ちになりましょう！";
+        const puiz=document.querySelector("#quiz");
+        quiz.innerHTML="【問題】夏目漱石の小説『吾輩は猫である』の最後の一文で、２度繰り返されている感謝を表す言葉は何。";
+        const answer=document.querySelector("#answer");
+        answer.innerHTML="【答え】ありがたい……この問題に正解できた貴方は何かありがたいご利益があるかも！";
+    }else if(num<=9){
+        const echo=document.querySelector("#echo");
+        echo.innerHTML="吉";
+        const test=document.querySelector("#test");
+        test.innerHTML="貴方は吉でした。難読漢字を読み解いてすっきりした気分になりましょう！";
+        const puiz=document.querySelector("#quiz");
+        quiz.innerHTML="【問題】晴れるに天で晴天(せいてん)と読みますが、天に晴れ(天晴)で何と読むでしょう。";
+        const answer=document.querySelector("#answer");
+        answer.innerHTML="【答え】あっぱれ……この問題を正解したあなたは、まさに天晴ですね！";
+    }else if(num==10){
+        const echo=document.querySelector("#echo");
+        echo.innerHTML="凶";
+        const test=document.querySelector("#test");
+        test.innerHTML="貴方は凶でした。凶を引いた貴方、今日は驚愕な恐怖体験をするかも…(きょうだけに…)";
+        const puiz=document.querySelector("#quiz");
+        quiz.innerHTML="【問題】伊勢神宮ではおみくじがありません、なぜでしょう。";
+        const answer=document.querySelector("#answer");
+        answer.innerHTML="【答え】お伊勢参りしたこと自体が大吉であるため。……この問題を正解できたあなたは大吉と言っていいでしょう！";
+    }
+}
+
+
+
+
+</script>
+</body>
+</html>
