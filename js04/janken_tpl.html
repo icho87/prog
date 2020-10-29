@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>僕とじゃんけんだ！</h1>
+  <h4>最初はグー！じゃんけん……</h4>
+</header>
+
+<main>
+  <ul>
+    <li id="gu_btn">グー</li>
+    <li id="cho_btn">チョキ</li>
+    <li id="par_btn">パー</li>
+  </ul>
+  <div>僕の出した手は<span id="pc_hands">……</span></div>
+  <div id="judgment">ー</div>
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+
+const num=Math.ceil(Math.random()*3);
+
+$("#gu_btn").html('<img src="pic_jan/gu_a_pic.png" alt="グー">');
+$("#cho_btn").html('<img src="pic_jan/cho_a_pic.png" alt="チョキ">');
+$("#par_btn").html('<img src="pic_jan/par_a_pic.png" alt="パー">');
+
+$("#gu_btn").on("click",function(){
+  if(num==1){
+    $("#pc_hands").html('<img src="pic_jan/gu_a_pic.png" alt="グー">');
+    $("#judgment").html("あいこだったね！");
+  }else if(num==2){
+    $("#pc_hands").html('<img src="pic_jan/cho_a_pic.png" alt="チョキ">');
+    $("#judgment").html("君の勝ちだ、おめでとう！");
+  }else if(num==3){
+    $("#pc_hands").html('<img src="pic_jan/par_a_pic.png" alt="パー">');
+    $("#judgment").html("君の負けさ、また勝負しよう！");
+  }
+});
+$("#cho_btn").on("click",function(){
+  if(num==1){
+    $("#pc_hands").html('<img src="pic_jan/gu_a_pic.png" alt="グー">');
+    $("#judgment").html("君の負けさ、また勝負しよう！");
+  }else if(num==2){
+    $("#pc_hands").html('<img src="pic_jan/cho_a_pic.png" alt="チョキ">');
+    $("#judgment").html("あいこだったね！");
+  }else if(num==3){
+    $("#pc_hands").html('<img src="pic_jan/par_a_pic.png" alt="パー">');
+    $("#judgment").html("君の勝ちだ、おめでとう！");
+  }
+});
+$("#par_btn").on("click",function(){
+  if(num==1){
+    $("#pc_hands").html('<img src="pic_jan/gu_a_pic.png" alt="グー">');
+    $("#judgment").html("君の勝ちだ、おめでとう！");
+  }else if(num==2){
+    $("#pc_hands").html('<img src="pic_jan/cho_a_pic.png" alt="チョキ">');
+    $("#judgment").html("君の負けさ、また勝負しよう！");
+  }else if(num==3){
+    $("#pc_hands").html('<img src="pic_jan/par_a_pic.png" alt="パー">');
+    $("#judgment").html("あいこだったね！");
+  }
+});
+
+//$("#pc_hands").html("わ～い");
+//$("#judgment").html("やっふ～");
+//$("#par_btn").html("うひゃ～");
+//const num=Math.ceil(Math.random()*10);
+    
+    
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
