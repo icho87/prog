@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/simple.css">
+<title>超難問</title>
+</head>
+<body>
+
+<header>
+    <h1 id="title">超マニアックなチョコクイズ</h1>
+</header>
+
+<main>
+<h3 id="ans">ここに答えが表示されます</h3>
+<div class="quiz">
+    <h1 id="mon">第1問</h1>
+    <p id="quest">ここに問題が出題されます</p>
+    <p class="sen">
+        <button name="toi" value="1"><span id="toi1">選択肢１</span></button><br>
+        <button name="toi" value="2"><span id="toi2">選択肢２</span></button><br>
+        <button name="toi" value="3"><span id="toi3">選択肢３</span></button><br>
+    </p>
+</div>
+</main>
+
+<footer>
+    <blockquote cite="https://quizknock.com/choco_mania">
+        <p>
+            出題問題はすべて<a href="https://quizknock.com/choco_mania" target="_blank">こちら</a>のサイトより引用しています。
+        </p>
+    </blockquote>
+</footer>
+<script>
+  //問題文
+    const qs=[
+        "カカオ豆の生産量が世界一多い国はどこ",
+        "板チョコについている溝は割りやすくするためのものではありません。では、最大の理由は何",
+        "1930年代にホワイトチョコが開発されて以来約80年ぶりとなる新しい色のチョコレートが開発されました。その色とは何色",
+        "初めてチョコを食べた日本人とされる、伊達政宗の家臣としてヨーロッパを訪れた使節大使は誰",
+        "一般的な脂肪に比べて太りにくいといわれている、チョコに最も多く含まれている脂肪酸はどれ",
+        "チョコの原材料・カカオの植物としての学名は何"
+    ];
+    
+  //選択肢
+    const toi=[
+        ["ガーナ","コートジボワール","インドネシア"],
+        ["表面積が増えると冷やしやすい","表面積が増えると香りやすい","表面積が増えると溶けにくい"],
+        ["むらさき","水色","ピンク"],
+        ["大友宗麟","支倉常長","ジョン万次郎"],
+        ["ステアリン酸","オレイン酸","パントテン酸"],
+        ["エウコフィア・カカオ","ニコティアナ・カカオ","テオブロマ・カカオ"]
+    ];
+    
+  //答え
+    const ans=[2,1,3,2,1,3];
+    const kai=[
+        "正解は2番目のコートジボワールでした。",
+        "正解は1番目の表面積が増えると冷やしやすいからでした。",
+        "正解は3番目のピンクでした。詳しくは「ルビーカカオ」で検索しましょう。",
+        "正解は2番目の支倉常長でした。",
+        "正解は1番目のステアリン酸でした。",
+        "正解は3番目のテオブロマ・カカオでした。"
+    ];
+
+  //問題文,選択肢,値を設定
+    let i=0;
+    $("#quest").text(qs[i]);
+    $("#toi1").html(toi[i][0]);
+    $("#toi2").html(toi[i][1]);
+    $("#toi3").html(toi[i][2]);
+    
+
+  //クリックイベント
+            
+    $("[name=toi]").on("click",function(){
+        if(i<=5){
+            const v=$(this).val();
+            if(ans[i]==v){
+                $("#ans").text("正解です！");
+            }else{
+                $("#ans").text("残念、"+kai[i]);
+            }
+            i++;
+            $("#quest").text(qs[i]);
+            $("#toi1").html(toi[i][0]);
+            $("#toi2").html(toi[i][1]);
+            $("#toi3").html(toi[i][2]);
+            $("#mon").html("第"+ (i+1) +"問");
+        }else{
+            alert("終了です!");
+        }
+        });
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    background: rgb(228, 203, 167);
+}
+#title{
+    margin: 50px 0px;
+    color: #fff;
+    background: rgb(104, 51, 7);
+    text-align: center;
+}
+#ans{
+    box-sizing: border-box;
+    padding: 15px;
+    border: 5px dotted rgb(153, 111, 87);
+    font-weight: bold;
+}
+#mon{
+    margin: 50px 10px 0;
+}
+.quiz #quest{
+    box-sizing: border-box;
+    padding: 15px;
+    border: 10px solid rgb(153, 111, 87);
+    font-weight: bold;
+}
+.sen button{
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid rgb(153, 111, 87);
+    margin: 0 0 -2px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+button{
+    background-color: rgb(228, 203, 167);
+    text-align: left;
+}
