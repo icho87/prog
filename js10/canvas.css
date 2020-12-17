@@ -1,0 +1,41 @@
+body{
+    background: rgb(255, 250, 182);
+}
+h1{
+    margin: 10px 0 10px 50px;
+    font-family: serif;
+    font-weight: bold;
+    color: rgb(170,30,30);
+    font-size: 50px;
+}
+h2{
+    margin: 50px 0 5px 0;
+    color: rgb(170,30,30);
+}
+canvas{
+    float: right;
+    background: #fff;
+    margin-right: 50px;
+}
+div{
+    float: left;
+    border: solid 3px rgb(170,30,30);
+    padding: 10px 50px 255px 50px;
+    margin-left: 50px;
+    background: rgb(255, 254, 238);
+}
+button{
+    margin-top: 30px;
+    padding: 10px 100px;
+    color: #000;
+    background: rgb(255, 250, 182);
+    border-bottom: 2px solid #968f11;
+}
+#size{
+    height: 10px;
+    width: 100%;
+}
+#col{
+    height: 50px;
+    width: 100%;
+}
