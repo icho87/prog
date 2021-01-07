@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 16px;
+}
+
+header {
+  background-color: rgb(21, 124, 47);
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #fff;
+}
+
+main {
+  margin: 50px 55px 50px 0;
+}
+
+h2{
+  font-size:16px;
+}
+
+p {
+  font-size: 100%;
+  text-align: center;
+  text-indent: 1em;
+  height: 100px;
+}
+
+ul {
+  margin: 20px;
+  padding: 0;
+  border: 5px double rgb(21, 124, 47);
+  display: table;
+  /* 定義 */
+  table-layout: auto;
+  width: 100%;
+}
+
+li {
+  padding: 5px 10px;
+  text-align: left;
+  list-style-type: none;
+  border: 1px solid rgb(21, 124, 47);
+  background-color: #FFF;
+  cursor: default;
+}
+
+textarea{
+  margin: 3%;
+  width: 30%;
+  height: 30px;
+  font-size:50%;
+  box-shadow: 3px 3px 3px 3px #555;
+}
