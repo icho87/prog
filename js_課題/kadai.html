@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Chatアプリ</title>
+<link rel="stylesheet" href="kadai.css">
+</head>
+<body>
+<h3 id="group">programmingグループ</h3>
+
+<!-- コンテンツ表示画面 -->
+<div>
+    <ul>
+        <div id="ch">
+            <div id="op1"></div>
+        </div>
+        <div>
+            <img src="imgs/body_finger_ok.png" id="p1"/>
+            <img src="imgs/hand_sign_i_love_you.png" id="p2"/>
+            <img src="imgs/text_animals_ogenki.png" id="p3"/>
+            <img src="imgs/text_toutoi.png" id="p4"/>
+        </div>
+        <div id="te">
+            <textarea id="text" cols="30" rows="10"></textarea>
+            <button id="send">送信</button>
+        </div>
+    </ul>
+</div>
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--** 以下Firebase **-->
+
+
+<script>
+//送信
+$("#send").on("click",function(){
+    const text =$("#text").val();
+    const msg  ={text:text}
+    ref.push(msg);
+});
+
+const now  =new Date();
+const year =now.getFullYear();
+const month=now.getMonth()+1;
+const date =now.getDate();
+const h    =now.getHours();
+const m    =now.getMinutes();
+const s    =now.getSeconds();
+const day  =year+"/" + month+"/" + date+"/"+ h+":" + m+":" + s;
+
+//"child_added:毎回1個","value:毎回全てのデータを取得"
+ref.on("child_added",function(data){
+    const v=data.val();
+    const k=data.key;
+    const q='<li>'+day+'</li>';
+    const p='<p>'+v.text+'</p>'+'<br>';
+    const r=p+q;
+    $("#op1").append(r);
+});
+
+$("#p1").click(function(){
+    const pic='<img src="imgs/body_finger_ok.png" id="p1"/>'+'<br>'+'<li>'+day+'</li>';
+    $("#op1").append(pic); });
+$("#p2").click(function(){
+    const pic='<img src="imgs/hand_sign_i_love_you.png" id="p2"/>'+'<br>'+'<li>'+day+'</li>';
+    $("#op1").append(pic); });
+$("#p3").click(function(){
+    const pic='<img src="imgs/text_animals_ogenki.png" id="p3"/>'+'<br>'+'<li>'+day+'</li>';
+    $("#op1").append(pic); });
+$("#p4").click(function(){
+    const pic='<img src="imgs/text_toutoi.png" id="p4"/>'+'<br>'+'<li>'+day+'</li>';
+    $("#op1").append(pic); });
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
